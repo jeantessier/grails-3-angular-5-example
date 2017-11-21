@@ -3,6 +3,7 @@ import {RouterModule,Routes} from '@angular/router';
 import {IndexComponent} from "./index/index.component";
 import { CustomerComponent } from "./customer/customer.component";
 import { CustomerCreateComponent } from "./customer-create/customer-create.component";
+import { CustomerDetailComponent } from "./customer-detail/customer-detail.component";
 
 const routes: Routes = [
   {
@@ -14,6 +15,11 @@ const routes: Routes = [
     path: 'customer-create',
     component: CustomerCreateComponent,
     data: { title: 'Add Customer' }
+  },
+  {
+    path: 'customer-details/:id',
+    component: CustomerDetailComponent,
+    data: { title: 'Customer Details' }
   },
   {
     path: '',

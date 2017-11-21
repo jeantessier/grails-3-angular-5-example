@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from "./app-routing.module";
 import { CustomerComponent } from './customer/customer.component';
 import { CustomerCreateComponent } from './customer-create/customer-create.component';
+import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CustomerCreateComponent } from './customer-create/customer-create.compo
 //     NavComponent,
     IndexComponent,
     CustomerComponent,
-    CustomerCreateComponent
+    CustomerCreateComponent,
+    CustomerDetailComponent
   ],
   imports: [
     BrowserModule,

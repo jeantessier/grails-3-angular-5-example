@@ -16,7 +16,7 @@
       <tr *ngFor="let cust of customers">
         <td>{{ cust.name }}</td>
         <td>{{ cust.address }}</td>
-        <td><a href="/show/{{cust.id}}">Show Detail</a></td>
+        <td><a href="/#/customer-details/{{cust.id}}">Show Detail</a></td>
       </tr>
     </tbody>
   </table>
