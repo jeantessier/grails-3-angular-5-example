@@ -10,4 +10,9 @@
     <dt>Phone Number</dt>
     <dd>{{ customer.phone }}</dd>
   </dl>
+  <div class="row">
+    <div class="col-md-12">
+      <a [routerLink]="['/customer-edit', customer.id]" class="btn btn-success">EDIT</a>
+    </div>
+  </div>
 </div>

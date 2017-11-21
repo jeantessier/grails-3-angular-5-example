@@ -4,6 +4,7 @@ import {IndexComponent} from "./index/index.component";
 import { CustomerComponent } from "./customer/customer.component";
 import { CustomerCreateComponent } from "./customer-create/customer-create.component";
 import { CustomerDetailComponent } from "./customer-detail/customer-detail.component";
+import { CustomerEditComponent } from "./customer-edit/customer-edit.component";
 
 const routes: Routes = [
   {
@@ -20,6 +21,11 @@ const routes: Routes = [
     path: 'customer-details/:id',
     component: CustomerDetailComponent,
     data: { title: 'Customer Details' }
+  },
+  {
+    path: 'customer-edit/:id',
+    component: CustomerEditComponent,
+    data: { title: 'Edit Customer' }
   },
   {
     path: '',
