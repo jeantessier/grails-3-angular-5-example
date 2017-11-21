@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 // import { NavService } from './nav/nav.service';
 import { AppRoutingModule } from "./app-routing.module";
 import { CustomerComponent } from './customer/customer.component';
+import { CustomerCreateComponent } from './customer-create/customer-create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
 //     NavComponent,
     IndexComponent,
-    CustomerComponent
+    CustomerComponent,
+    CustomerCreateComponent
   ],
   imports: [
     BrowserModule,
