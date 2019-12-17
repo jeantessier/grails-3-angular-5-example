@@ -1,9 +1,11 @@
+
+import {refCount, publishReplay, map} from 'rxjs/operators';
 import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
 
-import 'rxjs/add/operator/publishReplay';
-import 'rxjs/add/operator/map';
-import {Observable} from 'rxjs/Observable';
+
+
+import {Observable} from 'rxjs';
 
 import { environment } from '../../environments/environment';
 
@@ -17,10 +19,10 @@ export class NavService {
 
   getNavData(): Observable<any> {
     if (!this._navData) {
-      this._navData = this.http.get(environment.serverUrl + 'application')
-          .map((res: Response) => res.json())
-          .publishReplay()
-          .refCount();
+      this._navData = this.http.get(environment.serverUrl + 'application').pipe(
+          map((res: Response) => res.json()),
+          publishReplay(),
+          refCount(),);
     }
     return this._navData;
   }
